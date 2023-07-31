@@ -9,7 +9,7 @@ import Backpack from "./Backpack.js";
 const everydayPack = new Backpack(
   "Everyday Backpack",
   30,
-  "grey",
+  "red",
   15,
   26,
   26,
@@ -30,7 +30,7 @@ const content = `
       <li class="backpack__volume">Volume:<span> ${
         everydayPack.volume
       }l</span></li>
-      <li class="backpack__color">Color:<span> ${everydayPack.color}</span></li>
+      <li class="backpack__color">Color:<span style = color:${everydayPack.color}> ${everydayPack.color}</span></li>
       <li class="backpack__age">Age:<span> ${everydayPack.backpackAge()} days old</span></li>
       <li class="backpack__pockets">Number of pockets:<span> ${
         everydayPack.pocketNum

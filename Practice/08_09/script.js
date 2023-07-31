@@ -57,3 +57,25 @@ const content = `
       }</span></li>
     </ul>  
 `;
+
+const main = document.querySelector("main");
+// const newArticle = document.createElement("article");
+// newArticle.innerHTML = content;
+// main.append(newArticle);
+
+const addPack = (newPacks) => {
+  const newArticle = document.createElement("article");
+  newArticle.innerHTML = content;
+  newArticle.prepend(addFigure(newPacks));
+  return newArticle;
+};
+
+const addFigure = (newPacks) => {
+  const newFigure = document.createElement("figure");
+  const newImg = document.createElement("img");
+  newImg.src = newPacks.image;
+  newFigure.append(newImg);
+  return newFigure;
+};
+
+main.append(addPack(frogpack));
